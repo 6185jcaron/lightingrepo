@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cubebehavior : MonoBehaviour
+public class Spheremovement : MonoBehaviour
 {
     Vector3 vec;
     // Start is called before the first frame update
@@ -18,5 +18,6 @@ public class Cubebehavior : MonoBehaviour
         vec.y += Input.GetAxis("Jump") * Time.deltaTime * 20;
         vec.x += Input.GetAxis("Horizontal") * Time.deltaTime * 20;
         vec.z += Input.GetAxis("Vertical") * Time.deltaTime * 20;
+        transform.localPosition = vec;
     }
 }
